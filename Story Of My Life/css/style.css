@@ -19,7 +19,6 @@ html{
     padding: 0;
     margin:0;
     box-sizing: border-box;
-    -webkit-font-smoothing:antialiased;
 }
 header{
     background: var(--dark);
@@ -61,10 +60,6 @@ header nav .left a{
     margin-right:2rem;
     text-transform:uppercase;
     transition:all .3s ease;
-    -webkit-transition:all .3s ease;
-    -moz-transition:all .3s ease;
-    -ms-transition:all .3s ease;
-    -o-transition:all .3s ease;
 }
 header nav .left a:hover{
     color:var(--primary);
@@ -80,6 +75,7 @@ header nav .branding{
 }
 .hero .left img{
     width:400px;
+    border-radius: 50%;
 }
 .hero .right{
     color:var(--pure);
@@ -111,6 +107,7 @@ section{
 }
 section.about .about-me-img{
     height:450px;
+    border-radius: 250px;
 }
 section.about h1{
     margin-bottom: 1rem;
@@ -143,16 +140,8 @@ section.about .social a{
     width:35px;
     height:35px;
     border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
     margin-right:0.6rem;
     transition: all .3s ease;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
 }
 section.about .social a:hover{
     background:var(--primary);
@@ -194,20 +183,12 @@ section.services .card-wrapper .card{
     padding-top:5rem;
     text-align: center;
     transition: all .3s ease;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
 }
 section.services .card-wrapper .card img{
     position: absolute;
     top:-3.5rem;
     left:50%;
     transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
 }
 section.services .card-wrapper .card h2{
     font-weight: 400;
@@ -254,8 +235,8 @@ section.work .card-wrapper{
 }
 section.work .card-wrapper .card{
     position:relative;
-    height:250px;
-
+    height:350px;
+    width: 350px;
 }
 section.work .card-wrapper .card .overlay{
     position:absolute;
@@ -271,10 +252,6 @@ section.work .card-wrapper .card .overlay{
     color:var(--light);
     opacity:0;
     transition:all .3s ease;
-    -webkit-transition:all .3s ease;
-    -moz-transition:all .3s ease;
-    -ms-transition:all .3s ease;
-    -o-transition:all .3s ease;
 }
 section.work .card-wrapper .card:hover .overlay{
     opacity:1;
@@ -511,4 +488,48 @@ footer .copyright{
     section.contact .input-wrap{
         grid-template-columns: repeat(1, 1fr);
     }
+}
+.flex{
+    display:flex;
+}
+.items-center{
+    align-items:center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.btn{
+    padding:0.8rem 3rem;
+    font-size:1rem;
+    font-weight:600;
+    border:2px solid transparent;
+    outline:none;
+    cursor:pointer;
+    text-transform: uppercase;
+    transition:all .3s ease;
+}
+.btn-primary{
+    background:var(--primary);
+    color:var(--secondary);
+}
+.btn-primary:hover{
+    background:transparent;
+    border-color: var(--primary);
+    color:var(--primary);
+}
+.btn-secondary{
+    background:transparent;
+    color:var(--primary);
+    border-color:var(--primary);
+}
+.btn-secondary:hover{
+    background:var(--primary);
+    color:var(--secondary);
+}
+
+.flex-1{
+    flex:1;
+}
+.justify-center{
+    justify-content: center;
 }
